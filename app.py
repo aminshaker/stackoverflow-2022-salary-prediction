@@ -59,10 +59,7 @@ submit = st.button("Calculate Salary")
 
 # Handle submit data
 if submit:
-    X = np.array([countries,education,expericence])
-    columns = ['Country', 'EdLevel', 'YearsCodePro']
-    
-    df = pd.DataFrame([X], columns=columns)
+    df = pd.DataFrame([np.array([country,education,expericence])], columns=['Country', 'EdLevel', 'YearsCodePro'])
     salary = model.predict(df)
     
     st.subheader(f"The estimated salary is ${salary[0]:.2f}")
