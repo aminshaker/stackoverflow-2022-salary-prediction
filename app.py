@@ -65,4 +65,4 @@ if submit:
     df = pd.DataFrame([X], columns=columns)
     salary = model.predict(df)
     
-    st.subheader(f"The estimated salary is ${salary[0]:.2f}")\
+    st.subheader(f"The estimated salary is ${salary[0]:.2f}")
